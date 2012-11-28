@@ -1,0 +1,18 @@
+<?php echo $this->doctype('XHTML1_STRICT'); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link media="print" href="/css/ticket.css" />
+		<?php echo $this->headMeta(); ?>
+		<?php echo $this->headTitle(); ?>
+		<?php // $this->headLink()->appendStylesheet('/css/ticket.css'); ?> 
+		<?php //$this->headLink()->prependStylesheet('/css/main.css'); ?> 
+
+		<?php echo $this->headLink(); ?>
+		<?php echo $this->headScript(); ?>
+	</head>
+	<body>
+		<div class="container ">
+		<?php echo $this->layout()->content; ?>
+		</div>
+	</body>
+</html>

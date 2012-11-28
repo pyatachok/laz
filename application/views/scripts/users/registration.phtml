@@ -1,0 +1,7 @@
+<h2><?php echo $this->title; ?></h2>
+
+<?php if ( $this->send ) : ?>
+	<p>На указанный e-mail отправлена ссылка активации. Перейдите по ней и активируйте аккаунт.</p>
+<?php else : ?>
+	<?php echo $this->form; ?>
+<?php endif; ?>

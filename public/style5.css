@@ -1,0 +1,20 @@
+* {margin:0; padding:0; border:0;}
+
+body {color: #350e00;padding:2% 0 0; background:#FFF; font-family:"Times New Roman", Times, serif; background:url(img/na-beregu_background.jpg); background-repeat:repeat-y;}
+
+#container {width:1024px; margin:0 auto; text-align:center;}
+
+#header {background:url('img/header+.png') no-repeat; width:500px; height:100px; margin-left:90px;}
+	
+p {
+
+}
+
+.sub-title{
+	color: #c60308
+}
+
+a:link, a:visited {
+	color: #000;
+	text-decoration:none;	
+}

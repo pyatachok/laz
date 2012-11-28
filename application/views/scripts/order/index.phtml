@@ -1,0 +1,122 @@
+<h2><?php echo $this->title; ?></h2>
+<form method="post" action="/admin/order/index" name="mode_form" id="mode_form"> 
+	<label for="mode">Состояние заказа:</label>
+	<select name="mode" onchange="getElementById('mode_form').submit();" class="span-6">
+		<option value="<?php echo OrderController::EXCLUDE_DELIVERED_MODE; ?>" <?php echo (OrderController::EXCLUDE_DELIVERED_MODE == $this->mode ? 'selected' : '') ?>>Бронь, Оплачено (б/н), Отменено</option>
+		<option value="<?php echo OrderController::SHOW_DELIVERED_MODE; ?>" <?php echo (OrderController::SHOW_DELIVERED_MODE == $this->mode ? 'selected' : '') ?>>Передано в службу доставки</option>
+		<option value="<?php echo OrderController::ALL_MODE; ?>" <?php echo (OrderController::ALL_MODE == $this->mode ? 'selected' : '') ?>>Все</option>
+		<option value="<?php echo OrderController::ARCHIVE_MODE; ?>" <?php echo (OrderController::ARCHIVE_MODE == $this->mode ? 'selected' : '') ?>>Архив</option>
+	</select>
+</form>
+<?php if (count($this->paginator)) : ?>
+
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml', array('mode'=>$this->mode)); ?>
+<table class="table3">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Тип</th>
+			<th>Сумма</th>
+			<th>Действия</th>
+			<th>ФИО</th>
+			<th>Места</th>
+			<th>Постановка</th>
+			<th>Зал</th>
+			<th>Сеанс</th>
+			<th>e-mail</th>
+			<th>Дата Создания</th>
+			<th>Дата Модификации</th>
+			<th>Телефон</th>
+			<th>Адресс</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	<?php foreach ($this->paginator as $order) : ?>
+
+		<tr <?php echo( ($order->create_date < $this->alarm_date->format('Y-m-d H:i:s') && 'booked' == $order->type) ? "style='background-color: #EA6E6E;'" : ''); ?>>
+			<td><?php echo $order->id; ?></td>
+			<td><?php echo $order->type; ?></td>
+			<td><?php echo $order->amount; ?></td>
+			<td>
+				<?php if ( in_array($order->type, array('booked', 'payed','send_to_delivery') ) ) : ?>
+					<a c lass ="href-button" href="<?php echo $this->url(array('controller' => 'order', 'action' => 'rebook', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
+						Продлить бронь
+					</a>
+				<br/>
+				<?php if('send_to_delivery' == $order->type) : ?> 
+					<a class ="href-button" href="<?php echo $this->url(array('controller' => 'order', 'action' => 'buy', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
+						Выкуплено
+					</a>
+				<br/>
+				<?php endif; ?>
+				<?php if('send_to_delivery' !== $order->type) : ?> 
+				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'order', 'action' => 'sendtodelivery', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
+						Передано в службу доставки
+					</a>
+				<br/>
+				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'order', 'action' => 'buy', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
+					Выкуплено/Отдано на руки
+				</a>
+			<br/>
+				<?php endif; ?>
+			<?php endif; ?>
+			<?php if('canceled' !== $order->type && 'archive' !== $order->type) : ?>
+				<a c lass ="href-button" href="<?php echo $this->url(array('controller' => 'order', 'action' => 'cancel', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
+					Отменить/Возврат
+				</a>
+				<br/>
+			<?php endif; ?>
+			<?php if('archive' == $order->type) : ?>
+				<a class ="href-button del-button"
+				   href="<?php echo $this->url(array('controller' => 'order', 'action' => 'delete', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
+					Удалить
+				</a>
+				<br/>
+			<?php else: ?>
+				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'order', 'action' => 'archive', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
+					В архив
+				</a>
+			<?php endif; ?>
+			</td>
+			<td><?php echo $order->fio; ?></td>
+			<td><?php echo $order->getPlaces(); ?><b><?php echo ( !empty($order->presents_count) ? "<br/> + " . $order->presents_count . "(подарок)" : '' );?></b></td>
+			<td><?php echo $order->findParentRow('Application_Model_DbTable_Seans')->name . "<br/>" . "(<b>{$order->findParentRow('Application_Model_DbTable_Seans')->alias}</b>)"; ?></td>
+			<td><?php echo $order->findParentRow('Application_Model_DbTable_Zal')->name . "<br/>" . "(<b>{$order->zal_alias}</b>)"; ?></td>
+			<td style="white-space: nowrap"><?php echo $order->findParentRow('Application_Model_DbTable_Seans')->date; ?></td>
+			<td><?php echo $order->email; ?></td>
+			<td><?php echo date('d-m-Y H:i:s', strtotime($order->create_date)); ?></td>
+			<td><?php echo date('d-m-Y H:i:s', strtotime($order->modify_date)); ?></td>
+			<td><?php echo $order->tel; ?></td>
+			<td><?php echo $order->dostavka; ?></td>
+		</tr>
+	<?php endforeach; ?>
+		<tr></tr>
+	</tbody>
+</table>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml', array('mode'=>$this->mode)); ?>
+<?php endif; ?>
+
+<script type="text/javascript">
+	function printTicket() {
+		var newWin = window.open("",
+			"Печать билета",
+			"width=420,height=230,resizable=yes,scrollbars=yes,status=yes"
+		);
+
+
+		newWin.focus()
+		//newWin.print();
+	}
+	
+	$(document).ready(function(){
+		
+		$( ".del-button" ).click(function() {
+		if (!window.confirm("Хотите удалить безвозвратно?")){
+			return false;
+		}
+			
+		});
+		
+	});
+</script>

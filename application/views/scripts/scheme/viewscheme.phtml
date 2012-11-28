@@ -1,0 +1,100 @@
+<?php echo $this->headLink()->prependStylesheet('/css/hallscheame_12.css'); ?> 
+<?php echo $this->headLink()->prependStylesheet('/css/widgets/jquery.multiselect.css'); ?> 
+<?php $this->headScript()->appendFile('/js/jquery/widgets/jquery.multiselect.min.js'); ?> 
+<?php $this->headScript()->appendFile('/js/editScheme.js'); ?> 
+<h2><?php echo $this->title; ?></h2>
+<div class="clear"></div>
+<div  style="width: <?php echo (int)$this->zal->display_width + 280 + 30 + 30; ?>px; margin: auto;" class="">
+<table class="hall-scheame-wrapper collumn-1">
+	<tr>
+		<td></td>
+		<td>Схема зала</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+			<table class="hall-scheame">
+				<?php foreach ($this->scheme as $hall_part => $hallSchemePart) : ?>
+				<?php foreach ($hallSchemePart as $rowId => $row) : ?>
+					<tr class="hall-scheame-row">
+						<td class="row-number"><?php echo ( !empty( $this->ticket_rows[$hall_part][$rowId] ) ? $this->ticket_rows[$hall_part][$rowId] :  '' ) ?></td>
+						<td style="border: none; "></td>
+						<?php foreach ($row as $seatNumber => $seat) : ?>
+						<?php if ( in_array( $seat->place_type, array('empty', 'not_active'))) : ?>
+							<td style="border: none; ">
+								<span class="<?php echo $seat->place_type ?>"></span>
+							</td>
+						<?php else : ?>
+							<td class="hall-scheame-seat <?php echo $seat->ticket_state ?>">
+								<a id="seat_<?php echo $seat->id."_r_{$seat->ticket_row}_n_{$seat->seat_number}" ?>" <?php echo ('free' == $seat->place_type ? 'class="seat"' : '') ?> title="место <?php echo $seat->seat_number?>"><span class="<?php echo $seat->place_type ?>-scheme"></span></a>
+							</td>
+							<?php endif; ?>
+						<?php endforeach; ?>
+						<td style="border: none; "></td>
+						<td class="row-number"><?php echo $rowId ?></td>
+					</tr>
+				<?php endforeach; ?>
+					<tr><td colspan="<?php	echo $seatNumber;?>" class ="road" style="border: none; font-size: 10px;">
+							<span >&nbsp;</span>
+						</td>
+					</tr>
+				<?php endforeach; ?>
+			</table>
+		<td></td>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Сцена</td>
+		<td></td>
+	</tr>
+</table>
+<?php // if ( $this->seans->is_default === FALSE ) : ?>
+<div class="collumn-2">
+ <table class="legend">
+	 <tbody>
+	<tr>
+		<td colspan="2" style="text-align: center">Статус мест:</td>
+		<td></td>
+		<td colspan="3" style="text-align: center; white-space: nowrap">Категория мест:</td>
+	</tr>
+	<tr>
+		<td><span class="free-scheme bordered"></span></td>
+		<td>Свободно</td>
+		<td></td>
+		<td class="hall-scheame-seat VIP"> VIP </td>
+		<td class="hall-scheame-seat VIP"> <?php echo ( isset($this->seans->prices[1]) ? $this->seans->prices[1] : '---' )?> </td>
+	</tr>
+	<tr>
+		<td><span class="kassa-scheme"></span></td><td>Касса</td>
+		<td></td>
+		<td class="hall-scheame-seat deluxe"> Deluxe </td>
+		<td class="hall-scheame-seat deluxe"> <?php echo ( isset($this->seans->prices[2]) ? $this->seans->prices[2] : '---' )?> </td>
+	</tr>
+	<tr>
+		<td><span class="booked-scheme"></span></td>
+		<td >Бронь</td>
+		<td></td>
+		<td class="hall-scheame-seat standart"> Standart </td>
+		<td class="hall-scheame-seat standart"> <?php echo ( isset($this->seans->prices[3]) ? $this->seans->prices[3] : '---' )?> </td>
+	</tr>
+	<tr>
+		<td><span class="soled-scheme"></span></td><td>Куплено</td>
+		<td></td>
+		<td class="hall-scheame-seat economy"> Economy </td>
+		<td class="hall-scheame-seat economy"> <?php echo ( isset($this->seans->prices[4]) ? $this->seans->prices[4] : '---' )?>  </td>
+	</tr>
+</tbody>
+</table>
+
+</div>
+
+	
+</div>
+<div class="clear"></div>

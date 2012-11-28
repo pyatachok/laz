@@ -1,0 +1,271 @@
+﻿.jcarousel-skin-tango .jcarousel-container {
+	margin-left:58px;
+	width:790px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+	width:880px;
+}
+
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    width: 75px;
+    height: 245px;
+    padding: 40px 20px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+width:  880px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    width:  75px;
+    height: 245px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+   color:#414141;float:left;width:435px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-tango .jcarousel-item-vertical {
+    margin-bottom: 10px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+   background: url('../images/str.png') 0 -25px no-repeat;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.png);
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 27px;
+    left: -30px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+   background: url('../images/str.png') 0 0 no-repeat;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.png);
+}
+
+.opinionscar .jcarousel-prev-horizontal {
+	left:290px !important;
+}
+.opinionscar .jcarousel-next-horizontal {
+	left:320px !important;
+}
+
+
+
+/* Photo */
+.jcarousel-skin-photo .jcarousel-container {
+	margin-left:30px;
+	width:850px;
+}
+
+.jcarousel-skin-photo .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-photo .jcarousel-container-horizontal {
+
+}
+
+.jcarousel-skin-photo .jcarousel-container-vertical {
+    width: 75px;
+    height: 245px;
+    padding: 40px 20px;
+}
+
+.jcarousel-skin-photo .jcarousel-clip-horizontal {
+
+}
+
+.jcarousel-skin-photo .jcarousel-clip-vertical {
+    width:  75px;
+    height: 245px;
+}
+
+.jcarousel-skin-photo .jcarousel-item {
+   color:#414141;float:left;width:160px;
+}
+
+.jcarousel-skin-photo .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 10px;
+}
+
+.jcarousel-skin-photo .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-photo .jcarousel-item-vertical {
+    margin-bottom: 10px;
+}
+
+.jcarousel-skin-photo .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-photo .jcarousel-next-horizontal {
+    position: absolute;
+    top: 47px;
+    right: -34px; /*отступ правой стрелки*/
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+   background: url('/images/str.png') -22px 0 no-repeat;
+}
+
+.jcarousel-skin-photo .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.png);
+}
+
+.jcarousel-skin-photo .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 47px;
+    left: -35px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+   background: url('../images/str.png') 0 0 no-repeat;
+}
+
+.jcarousel-skin-photo .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.png);
+}
+
+/* Comment */
+.jcarousel-skin-comment .jcarousel-container {
+	margin-left:0px;
+	width:790px;
+}
+
+.jcarousel-skin-comment .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-comment .jcarousel-container-horizontal {
+
+}
+
+.jcarousel-skin-comment .jcarousel-container-vertical {
+    width: 75px;
+    height: 245px;
+    padding: 40px 20px;
+}
+
+.jcarousel-skin-comment .jcarousel-clip-horizontal {
+
+}
+
+.jcarousel-skin-comment .jcarousel-clip-vertical {
+    width:  75px;
+    height: 245px;
+}
+
+.jcarousel-skin-comment .jcarousel-item {
+   color:#414141;float:left;width:790px;
+}
+
+.jcarousel-skin-comment .jcarousel-item-horizontal {
+	margin-left: 0;
+    margin-right: 10px;
+}
+
+.jcarousel-skin-comment .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+    margin-right: 0;
+}
+
+.jcarousel-skin-comment .jcarousel-item-vertical {
+    margin-bottom: 10px;
+}
+
+.jcarousel-skin-comment .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-comment .jcarousel-next-horizontal {
+    position: absolute;
+    top: -22px;
+    left: 198px;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+   background: url('../images/str-com.gif') -24px 0 no-repeat;
+}
+
+.jcarousel-skin-comment .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background-image: url(prev-horizontal.png);
+}
+
+.jcarousel-skin-comment .jcarousel-prev-horizontal {
+    position: absolute;
+    top: -22px;
+    left: 168px;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+   background: url('../images/str-com.gif') 0 0 no-repeat;
+}
+
+.jcarousel-skin-comment .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background-image: url(next-horizontal.png);
+}
+
+
+jcarousel-next jcarousel-next-horizontal

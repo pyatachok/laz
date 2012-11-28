@@ -1,0 +1,55 @@
+<h2> <?php echo $this->title; ?></h2>
+
+<a class ="href-button" href="<?php echo $this->url(array('controller' => 'zal', 'action' => 'add'),null,true)?>">Добавить новый зал</a>
+<br/>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+<?php if (count($this->paginator)) : ?>
+<table class="table3">
+	<thead>
+		<th>#</th>
+		<th>Действия</th>
+		<th>Название</th>
+		<th>Кол-во мест</th>
+		<th>Псевдоним</th>
+		<th>Кол-во рядов</th>
+		<th>Кол-во мест</th>
+		<th>Ширина схемы</th>
+		<th>Высота схемы</th>
+	</thead>
+	<tbody>
+		<?php foreach ($this->paginator as $zal) : ?>
+			<tr>
+				<td><?php echo $zal->id; ?></td>
+				<td>
+					<a class ="href-button" href="<?php echo $this->url(array('controller' => 'zal', 'action' => 'delete', 'id' => $zal->id),null,true)?>">
+						Удалить
+					</a><br/>
+					<?php if ( !empty($zal->alias) ) : ?>
+					<a class ="href-button" href="<?php echo $this->url(array('controller' => 'zal', 'action' => 'viewscheme', 'id' => $zal->id),null,true)?>">
+						Просмотреть схему зала
+					</a><br/>
+					<a class ="href-button" href="<?php echo $this->url(array('controller' => 'scheme', 'action' => 'edit', 'zal_alias' => $zal->alias),null,true)?>">
+						Редактировать схему зала
+					</a>
+					<?php endif; ?>
+				</td>
+				<td>
+					<a class ="href-button" href="<?php echo $this->url(array('controller' => 'zal', 'action' => 'edit', 'id' => $zal->id),null,true)?>">
+						<?php echo $zal->name; ?>
+					</a>
+				</td>
+				<td><?php echo $zal->mest; ?></td>
+				<td><?php echo $zal->alias; ?></td>
+				<td><?php echo $zal->rows; ?></td>
+				<td><?php echo $zal->colls; ?></td>
+				<td><?php echo $zal->display_width; ?></td>
+				<td><?php echo $zal->display_height; ?></td>
+			</tr>
+			<?php endforeach; ?>
+	</tbody>
+</table>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+<?php else : ?> 
+	<p><?php echo 'Залов пока нет'; ?></p>
+<?php endif; ?>
+<br/>

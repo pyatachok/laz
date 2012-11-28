@@ -1,0 +1,124 @@
+<style type="text/css">
+	* {
+	margin: 0;
+	padding: 0;
+}
+p{
+	font-size: 12px;
+}
+
+.container{
+margin: 0;	
+}
+
+div.ticket{
+	width: 700px;
+	height: 250px;
+	border: 1px solid #000066;
+	/*display: inline;*/
+	/*margin: 5px;*/
+}
+.collumn{
+	/*display: inline-block;*/
+	font-family: monospace;
+	color : #000;
+	text-align: center;
+	height: 250px;
+	float: left;
+}
+.collumn-1{
+	width: 340px;
+}
+
+.collumn-1 p {
+	margin: 10px 5px;
+}
+.collumn-1 h2 {
+	margin: 20px 5px;
+	
+}
+
+.collumn-2{
+	width: 340px;
+	padding-top: 40px;
+	
+}
+.collumn-3{
+	/*border: 1px solid #008000;*/
+	width: 48px;
+	border-left: 1px solid #000066;
+
+}
+
+p.bold{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.bordered-font {
+	font-size: 22px;
+	font-weight: bold;
+	border: 1px solid #000066;
+	padding: 3px 5px;
+}
+h2{
+	color : #000;
+	font-size: 24px;
+}
+h1{
+	color : #000;
+	font-size: 26px;
+	font-weight: bold;
+}
+.vertical{
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    writing-mode: tb-rl;
+    width: 240px;
+    height: 50px;
+	margin: 90px 0 0 -80px;
+}
+</style>
+
+<?php foreach ($this->order_seats as $ticket ) : ?>
+<?php if ($this->seat_id == $ticket->id) : ?>
+<div class="ticket">
+	<div class="collumn-1 collumn">
+		<h2><?php echo $this->static_variables['theatre_name_ru']->value; ?></h2>
+		<p><?php echo $this->static_variables['site_url']->value; ?></p>
+		<p class="bold"><?php echo $this->order->getRow()->findParentRow('Application_Model_DbTable_Seans')->date; ?></p>
+		<br/><br/>
+		<p><?php echo ucwords($ticket->hall_part) ?></p>
+		<p>Ряд <font class="bordered-font"><?php echo $ticket->row?></font> Место <font class="bordered-font"><?php echo $ticket->seat_number; ?></font></p>
+		<p>Стоимость: <font><?php echo $ticket->price; ?>&nbsp;руб.</font></p>
+	</div>  
+	<div class="collumn-2 collumn">
+		<h1 style="height: 180px; margin: auto;"><?php echo $this->order->getRow()->findParentRow('Application_Model_DbTable_Seans')->name; ?></h1>
+		<p style="vertical-align: bottom; height: 30px;"><?php echo $this->order->id; ?></p>
+	</div>  
+<!--	<div class="collumn-3 collumn">
+		<div class="vertical">
+			<p>КОНТРОЛЬ</p>
+			<p><?php echo $this->order->id; ?></p>
+		</div>
+	</div>  -->
+	
+</div>
+<?php endif; ?>
+<div  style="clear: both;"></div>
+<?php endforeach; ?>
+
+<script type="text/javascript">
+	
+//	var newWin = window.open("",
+//   "Печать билета",
+//   "width=auto,height=250px,resizable=yes,scrollbars=yes,status=yes"
+//)
+//
+//newWin.focus()
+//newWin.print();
+window.width = 705;
+window.height = 255;
+window.print();
+</script>

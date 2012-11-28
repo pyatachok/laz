@@ -1,0 +1,27 @@
+* {margin:0; padding:0; border:0;}
+
+body {padding:2% 0 0; background:#FFF; font-family:"Times New Roman", Times, serif; background:url(img/bg-mul.jpg); background-repeat:repeat-y;}
+#container {width:1024px; margin:0 auto; text-align:center;}
+	
+#header1 {margin-left:90px;}
+
+#header {background:url(img/header.png) no-repeat; width:500px; height:100px; margin-left:90px;}
+
+#menu {width:1000px; height:100px; }
+
+#main {margin-top:10px;}
+
+#main img {padding-right:25px;}
+
+#footer {margin-top:20px;}
+
+#footer p {font-size:16px; text-align:left; margin-left:90px; margin-top:20px;}
+
+.tel {font-size:29px;}
+
+h1 {color:#841b0d; font-size:22px;}
+
+a:link, a:visited {
+	color: #000;
+	text-decoration:none;	
+}

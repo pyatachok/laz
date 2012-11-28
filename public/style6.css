@@ -1,0 +1,51 @@
+* {margin:0; padding:0; border:0;}
+
+body {
+	color: #350e00;
+	/*padding:2% 0 0;*/ 
+	position: relative; 
+	top: 20px; 
+	background:#FFF; 
+	font-family:"Times New Roman", Times, serif; 
+	background:url(img/elka-bg.jpg); 
+	background-position: center; 
+	background-position: 40% 1%; 
+	
+	background-repeat:repeat-x;
+	
+}
+
+#container{
+	height: 1320px;
+	/*background:url(img/ded2.png);*/ 
+	/*background-position: center;*/ 
+	/*background-position: 100% 60%;*/
+	/*background-repeat:no-repeat;*/
+}
+h2 {
+	font-size: 24px;
+}
+h1 {
+	font-size: 22px;
+}
+h3 {
+	font-size: 18px;
+}
+#container {width:1024px; margin:0 auto; text-align:center;}
+
+#header {background:url('img/header_elki.png') no-repeat; width:500px; height:100px; margin-left:90px;}
+
+a:link, a:visited {
+	color: #000;
+	text-decoration:none;	
+}
+
+.text1 {
+	color: #ffedcc;
+	font-weight: normal;
+}
+
+.text2 {
+	color: #02698f;
+	font-weight: bold;
+}

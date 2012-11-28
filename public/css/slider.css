@@ -1,0 +1,7 @@
+﻿div.scrollableElement { position:relative; overflow:hidden; width: 507px; height: 290px; }
+div.scrollableElement div.items { width:20000em; position:absolute; }
+div.scrollableElement div.items div { float:left; }
+div.items div.active { border:1px inset #ccc; background-color:#fff; }
+a.nextPage, a.prevPage { font-size: 0; display: block; height: 27px; position: absolute; z-index: 80; margin: -49px 0 0 0; }
+a.prevPage { width: 34px; margin-left: 607px; background: url(../images/seo_butt.gif) no-repeat 0px 0px; }
+a.nextPage { width: 33px; margin-left: 638px; background: url(../images/seo_butt.gif) no-repeat right 0px; }

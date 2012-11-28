@@ -1,0 +1,42 @@
+<h2><?php echo $this->title; ?></h2>
+
+<?php if (count($this->paginator)) : ?>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+<table class="table3">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Зал</th>
+			<th>Ряд</th>
+			<th>Место</th>
+			<th>ФИО</th>
+			<th>Телефон</th>
+			<th>e-mail</th>
+			<th>Адресс</th>
+			<th>Сектор</th>
+			<th>Купон</th>
+			<th>Дата</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	<?php foreach ($this->paginator as $order) : ?>
+		<tr>
+			<td><?php echo $order->id; ?></td>
+			<td><?php echo $order->zal; ?></td>
+			<td><?php echo $order->ryad; ?></td>
+			<td><?php echo $order->mesto; ?></td>
+			<td><?php echo $order->name; ?></td>
+			<td><?php echo $order->tel; ?></td>
+			<td><?php echo $order->mail; ?></td>
+			<td><?php echo $order->addr; ?></td>
+			<td><?php echo $order->SECTOR; ?></td>
+			<td><?php echo $order->CUPON; ?></td>
+			<td style="white-space: nowrap"><?php echo $order->DATE; ?></td>
+		</tr>
+	<?php endforeach; ?>
+		<tr></tr>
+	</tbody>
+</table>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'pagination.phtml'); ?>
+<?php endif; ?>

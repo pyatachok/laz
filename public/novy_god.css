@@ -1,0 +1,31 @@
+﻿* {margin:0; padding:0; border:0;}
+
+body {padding:0 0 0 0; background:#070e3c; font-family:"Times New Roman", Times, serif; background:url(img/elka_page3.jpg); background-repeat:repeat-y;}
+#container_main {width:100%; background:url(img/elka_page4.jpg);background-position:top right;background-repeat:repeat-y;}
+#container {width:1024px; margin:0 auto; text-align:center;}
+
+#header1 {margin-left:90px;}
+
+#header {background:url(img/header.png) no-repeat; width:500px; height:100px; margin-left:90px;}
+
+#menu {width:1000px; height:100px; }
+
+#main {}
+
+#main img {padding-right:25px;}
+
+#footer {margin-top:5px;}
+
+#footer p {font-size:16px; text-align:left; margin-left:90px; margin-top:0;}
+
+#footer img {padding-right:5px;}
+
+.tel {font-size:29px;}
+
+h1 {color:#841b0d; font-size:22px;}
+
+a:link, a:visited {
+	color: #fff;
+	text-decoration:none;
+}
+.TextBig {background:url(img/bg_elka_pop2.png);background-position:top left;background-repeat:no-repeat;z-index:200;position:absolute;width:1024px;height:1172px; margin:0 auto;text-align:left; padding:0px;}

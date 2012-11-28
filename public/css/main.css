@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h2{
+	color : red;
+}
+
+.admin-content{
+	margin: auto;
+	background-color: #feeebd;
+}
+
+table.admin-items-list{
+	margin: auto;
+}
+
+/* Редактирование схемы зала */
+
+div#edit-default-scheme-container{
+	/*margin: 10px 0;*/
+}
+div#hall-part-manager, div#hall-seats-manager {
+	/*border: 1px solid #070e3c;*/
+	padding: 15px 15px;
+}
+
+.footer, .header {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+.colborder {padding-right:24px;margin-right:25px;border-right:1px solid #ddd;}
+.container {width:1190px;margin:0 auto;}
+.last {margin-right:0;}
+.span-1 {width:40px;}
+.span-2 {width:90px;}
+.span-3 {width:140px;}
+.span-4 {width:190px;}
+.span-5 {width:240px;}
+.span-6 {width:290px;}
+.span-7 {width:340px;}
+.span-8 {width:390px;}
+.span-9 {width:440px;}
+.span-10 {width:490px;}
+.span-11 {width:540px;}
+.span-12 {width:590px;}
+.span-13 {width:640px;}
+.span-14 {width:690px;}
+.span-15 {width:740px;}
+.span-16 {width:790px;}
+.span-17 {width:840px;}
+.span-18 {width:890px;}
+.span-19 {width:940px;}
+.span-20 {width:990px;}
+.span-21 {width:1040px;}
+.span-22 {width:1090px;}
+.span-23 {width:1140px;}
+.span-24 {width:1190px;margin-right:0;}
+
+
+#sidebar{
+	float: left;
+}
+#content{
+	float: right;
+}
+#footer {
+	float: left;
+}
+
+/* Стили для таблицы */
+
+.table3 tr td {padding: 2px 5px; border: 1px solid #C0C0C0; color: #58595b; text-align: center}
+.table3 tbody tr:nth-child(odd) {background: #feeebd }
+.table3 tbody tr:nth-child(even) {background:#ddd }
+.table3 tbody tr:hover {background: activeborder}
+.table3 tr th {padding: 2px 5px; border: 1px solid #7D26CD; color: #58595b; background: #FFBF77 }
+/* Стили для таблицы */
+
+
+.admin-form-element{
+	width: 500px;
+}
+
+.logs{
+	text-align: left;
+	font-family: monospace;
+}
+

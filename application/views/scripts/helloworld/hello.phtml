@@ -1,0 +1,18 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Helloworld</b> and script/action name <b>hello</b></p>
+</div>
+
+<form method="post" action="/admin/helloworld/hello">
+<select name="dir">
+	<?php foreach ($this->files as $dir) : ?>
+	<option value="<?php echo $dir; ?>"><?php echo $dir; ?></option>
+	<?php endforeach; ?>
+</select>
+	<input type="submit" value="send" name="send" />
+</form>
+<?php 
+echo "<pre>";
+var_dump($this->files);
+echo "</pre>";
+?>

@@ -1,0 +1,36 @@
+﻿* {margin:0; padding:0; border:0;}
+
+body {padding:2% 0 0; background:#FFF; font-family:"Times New Roman", Times, serif; background:url(img/bg_project.jpg) repeat;}
+
+#container {width:1024px; margin:0 auto; text-align:center;}
+
+.bg-text {background:url(img/bg-text.png) no-repeat; background-position:right; padding:2% 0 0 0; height:704px; }
+
+.bg-text p {padding-right:10px;}
+
+#header {background:url(img/header.png) no-repeat; width:500px; height:100px; margin-left:90px;}
+
+#header1 {margin-left:90px;}
+
+#menu1 {}
+
+#menu {border-top:1px solid #000; margin-bottom:30px;}
+
+#menu ul {list-style-type:none; padding-left:65px;}
+
+#menu ul li {float:left; padding-right:10px; font-size:20px; font-weight:500;}
+
+#main {margin-top:10px;}
+
+#main img {padding-right:25px;}
+
+#footer {margin-top:10px;}
+
+#footer p {font-size:16px; text-align:left; margin-left:90px;}
+
+.tel {font-size:29px;}
+
+a:link, a:visited {
+	color: #000;
+	text-decoration:none;	
+}

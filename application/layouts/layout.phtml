@@ -1,0 +1,95 @@
+<?php echo $this->doctype('XHTML1_STRICT'); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<?php echo $this->headMeta(); ?>
+		<?php echo $this->headTitle(); ?>
+		<?php $this->headLink()->prependStylesheet('/css/main.css'); ?> 
+
+		<?php echo $this->headLink(); ?>
+		<?php echo $this->headScript(); ?>
+	</head>
+	<body>
+		<div class="container ">
+		<div id="header" class="span-24 last">
+			<h2><?php echo $this->title;?></h2>
+			
+		</div>
+		<div id="sidebar" class="span-4 colborder">
+			<?php if (false !== $this->identity) : ?>
+				<h2>Main Menu</h2>
+				<ul class="menu" id="main-menu">
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'users', 'action' => 'index'), null, true); ?>">
+							User Manager
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'zal', 'action' => 'index'), null, true); ?>">
+							Hall Manager
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'seans', 'action' => 'index'), null, true); ?>">
+							Seans Manager
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'order', 'action' => 'index'), null, true); ?>">
+							Order Manager
+						</a>
+					</li>
+	<!--				<li><a href="#">Item 3</a>
+						<ul>
+							<li><a href="#">Item 3-1</a></li>
+							<li><a href="#">Item 3-2</a></li>
+							<li><a href="#">Item 3-3</a></li>
+							<li><a href="#">Item 3-4</a></li>
+							<li><a href="#">Item 3-5</a></li>
+						</ul>
+					</li>-->
+					<li><a href="<?php echo $this->url(array('controller' => 'bron', 'action' => 'index'), null, true); ?>">
+							Old orders</a></li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'faq', 'action' => 'index'), null, true); ?>">
+							FAQ
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'logs', 'action' => 'index'), null, true); ?>">
+							View Logs
+						</a>
+					</li>
+					<!--<li><a href="#">Item 5</a></li>-->
+				</ul>
+			<?php endif; ?>
+			
+			<div class="clear"></div>
+			<div>
+				<?php if (false !== $this->identity) : ?>
+					<a href="<?php echo $this->url(array('controller' => 'users', 'action' => 'logout'), null, true); ?>" class="href-button">
+						Выход
+					</a>
+				<?php else : ?>
+					<?php echo $this->login_form; ?>
+					<hr style="margin: 15px 0; "/>
+					<a href="<?php echo $this->url(array('controller' => 'users', 'action' => 'getnewpass'), null, true); ?>" class="href-button">
+						Забыли пароль?
+					</a>
+					<a href="<?php echo $this->url(array('controller' => 'users', 'action' => 'registration'), null, true); ?>" class="href-button">
+						Регистрация
+					</a>
+				<?php endif; ?>
+			</div>
+		</div>
+		<div id="content" class="span-19  last">
+
+			<?php echo $this->layout()->content; ?>
+			
+		</div>
+			<div class="clear"></div>
+		<div id="footer" class="span-24 last">
+			<p><?php echo (false !== $this->identity ? "Вы вошли как - " . $this->identity->role : ''); ?></p>
+		</div>
+		</div>
+	</body>
+</html>

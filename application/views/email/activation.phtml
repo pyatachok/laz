@@ -1,0 +1,9 @@
+<h2>Добро Пожаловать!</h2>
+
+<p>
+	<a href="<?php echo $this->serverUrl() . $this->url(array('controller' => 'users', 'action' => 'confirm','id' =>  $this->user->id, 'code' => $this->user->code ), null, true); ?>"> 
+		Ссылка активации
+	</a>
+</p>
+
+<p>С Уважением!</p>

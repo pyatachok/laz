@@ -36,6 +36,8 @@ class SeansController extends Zend_Controller_Action
 		$paginator->setCurrentPageNumber($this->_getParam('page'));
 		$paginator->setItemCountPerPage(10);
 		$this->view->paginator = $paginator;
+		
+		$this->view->page = $this->_getParam('page', 1);
     }
 
 	public function addAction()
@@ -85,6 +87,16 @@ class SeansController extends Zend_Controller_Action
 				$scheme = new Application_Model_Scheme($seans->zal_alias);
 				$scheme->createSchemeLikeDefault($seans->id);
 				
+				$page = $this->_getParam('page');
+		
+				if ( !empty ($page) )
+				{
+					$params = array();
+
+					!empty($page) ? $params['page'] = $page : '';
+
+					$this->_helper->redirector->gotoSimpleAndExit('index', 'seans', null, $params);
+				}
 				$this->_helper->redirector('index');
 			}
 		}
@@ -140,6 +152,16 @@ class SeansController extends Zend_Controller_Action
 				
 				$seans->save();
 					
+				$page = $this->_getParam('page');
+		
+				if ( !empty ($page) )
+				{
+					$params = array();
+
+					!empty($page) ? $params['page'] = $page : '';
+
+					$this->_helper->redirector->gotoSimpleAndExit('index', 'seans', null, $params);
+				}
 				$this->_helper->redirector('index');
 			}
 		}	
@@ -184,6 +206,16 @@ class SeansController extends Zend_Controller_Action
 		}
 		
 		$seans->delete();
+		$page = $this->_getParam('page');
+		
+		if ( !empty ($page) )
+		{
+			$params = array();
+
+			!empty($page) ? $params['page'] = $page : '';
+
+			$this->_helper->redirector->gotoSimpleAndExit('index', 'seans', null, $params);
+		}
 		$this->_helper->redirector('index');
 		
 	}

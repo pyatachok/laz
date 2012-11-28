@@ -23,7 +23,7 @@
 		<tr>
 			<td><?php echo $seans->id; ?></td>
 			<td>
-				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'seans', 'action' => 'edit', 'id' => $seans->id),null,true)?>">
+				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'seans', 'action' => 'edit', 'id' => $seans->id, 'page' =>  $this -> page),null,true)?>">
 				<?php echo $seans->name; ?>
 				</a>
 			</td>
@@ -32,12 +32,12 @@
 			<td><?php echo ($seans->is_strickt_seat ? 'Строгий' : 'Свободный') ?></td>
 			<td><?php echo $seans->alias; ?></td>
 			<td>
-				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'seans', 'action' => 'delete', 'id' => $seans->id),null,true)?>">Delete</a>
+				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'seans', 'action' => 'delete', 'id' => $seans->id, 'page' =>  $this -> page),null,true)?>">Delete</a>
 				<br/>
 				<?php if ( 'old' != $seans->alias) : ?>
-				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'scheme', 'action' => 'edit', 'seans_id' => $seans->id, 'zal_alias' => $seans->zal_alias),null,true)?>">Править схему</a>
+				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'scheme', 'action' => 'edit', 'seans_id' => $seans->id, 'zal_alias' => $seans->zal_alias, 'page' =>  $this -> page),null,true)?>">Править схему</a>
 				<br/>
-				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'scheme', 'action' => 'viewscheme', 'seans_id' => $seans->id, 'zal_alias' => $seans->zal_alias),null,true)?>">Просмотреть схему</a>
+				<a class ="href-button" href="<?php echo $this->url(array('controller' => 'scheme', 'action' => 'viewscheme', 'seans_id' => $seans->id, 'zal_alias' => $seans->zal_alias, 'page' =>  $this -> page),null,true)?>">Просмотреть схему</a>
 				<?php endif; ?>
 			</td>
 		</tr>

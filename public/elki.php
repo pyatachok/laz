@@ -19,12 +19,11 @@
 		<div id="container">
 			<?php include_once ("blocks/header_elki.php"); ?>
 			<div id="main">
-				<div id="ded"></div>
 				<?php include_once ("blocks/menu-elki.php"); ?>
 				<div align="left" style="width: 875px; position: relative; bottom: 3px; margin-left: 70px;">
 					<div style="width: 500px; height: 120px; float: left; margin: 20px 0px 5px 35px;">
-						<h1 style="font-size: 36pt;"><span class="text1">Песочные ЁЛКИ</span><h1>
-						<h3 style="font-size: 18pt;"><span class="text1">Совместные ёлки Театра живой анимациии<br> и Студии рисования песком СэндПРО<br> в Доме Архитектора</span></h3>
+						<h1 style="font-size: 36pt;"><span class="text1">Песочные ЕЛКИ</span><h1>
+						<h3 style="font-size: 18pt;"><span class="text1">Совместные елки Театра живой анимациии<br> и Студии рисования песком СэндПРО<br> в Доме Архитектора</span></h3>
 					</div>
 					<div style="width: 300px; float: right; background-repeat: no-repeat; background-image: url(img/elki_dati.png);">
 						<div style="margin: 5px 0px 0px 45px;">
@@ -40,35 +39,35 @@
 						</div>
 					</div>	
 					<div style="width: 600px; height: 600px; clear: left; position: relative; top: 25px; background-image: url(img/elki_background.png);">
-						<div style="float: left; margin: 20px 0px 0px 25px; font-size: 16px;">
-							<div style="margin-bottom: 18px;">В канун Нового года и Рождества мы традиционно <br>
-							проводим Настоящие <b>ПЕСОЧНЫЕ ЁЛКИ</b>, главной <br> 
-							особенностью которых станет, конечно же, обязательное<br>
-							присутствие в программе песочной анимации.</div>
-
-							<div style="margin-bottom: 18px;">Песочная ЁЛКА от Студии рисования песком СэндПРО –<br>
-							явление поистине уникальное, такой ёлки нет нигде в мире!<br>
-							Это не просто Ёлка, это настоящий Песочный праздник,<br>
-							который запомнится и вам, и вашему чаду на всю жизнь:)</div>
-
-							<div style="margin-bottom: 18px;">В этом году Вас ждет <span class="text2">Новый НОВЫЙ Год!</span></div>                                  
-							
-							<div style="margin-bottom: 18px;"><span style="text-decoration: underline;">
-							В программе:</span>  • <b>Активное фойе</b> - огромная площадка<br>
-							различных активностей! • <b>Песочная поляна</b> со световыми<br> 
-							столами, на которых все-все наши гости, и не только юные,<br> 
-							смогут порисовать песком; • <b>Песочные сугробы</b> для самых<br>
-							маленьких, где они от души нарезвятся; • снежные <br>
-							<b>Песочные клумбы</b> с волшебным "лунным" песком, из которого<br>
-							приятно слепить что-нибудь в духе праздника; • <b>зеленая Ёлка<br>
-							вокруг которой мы будем водить настоящие хороводы<br> 
-							с Дедом Морозом и Снегурочкой;</b> • витаминные<br> 
-							угощения, так необходимые для иммунитета в<br> 
-							зимнее время и, конечно, <b>праздничный буфет!</b></div>
-							
-							<div style="margin-bottom: 18px;">
-							<b>Площадка:</b> Дом архитектора / Гранатный переулок, дом 7.
+						<div style="margin-left: 30px; position: relative; top: 15px; font-size: 18px; font-weight: inherit; font-style: inherit; font-family: inherit;">
+							<div style="margin-bottom: 12px; font-size: 15px;">
+							<span style="font-size: 16px;">В канун Нового года и Рождества Студия рисования песком СэндПРО<br>
+							традиционно проводит  <span style="color: red;">Настоящие Песочные Елки</span>, главной особенностью</span><br>
+							<span style="font-size: 14px;">которых станет, конечно же, непременное присутствие в программе песочной анимации.</span><br>
+							<span style="font-size: 16px;">Искусство рисования песком – зрелище волшебное, завораживающее, как нельзя 
+							лучше передающее сказочную атмосферу новогодних праздников. Вы увидите не
+							просто песочную сказку, а часовой песочный спектакль, искусно приправленный 
+							постановочными находками Театра живой анимации.</span>
 							</div>
+							<div style="margin-bottom: 6px; font-size: 15px;">
+							<span style="font-size: 16px;">Более того, мы хотим, чтобы наше песочное поздравление осталось в сердце<br>
+							каждого зрителя, поэтому, как театр начинается с вешалки, наш праздник<br>
+							<span style="font-size: 15px;">начнется для вас с Активного фойе – огромной площадки песочных активностей</span><br> 
+							на любой вкус и возраст! «Гвоздем» Активного фойе станет, конечно же,<br>
+							<span style="font-size: 15px;">Песочная поляна, на которой раскинутся световые установки для песочного</span><br> 
+							рисования. Поверьте, вы не сможете удержаться от соблазна и обязательно<br>
+							<span style="font-size: 15px;">попробуете порисовать – и получите огромное удовольствие. А главное, сделать</span><br>
+							это вы сможете как перед спектаклем, так и после него – время получения новогодних удовольствий на нашей Елке неограниченно!</span>
+							</div>
+							<h3 style="margin-bottom: 6px; letter-spacing: 1px">В программе:</h3> 
+							<ul style="font-size: 16px; margin-left: 12px;">
+							<li style="margin-bottom: 6px;"><span style="color: blue;">Шоу песочной анимации</span> – постановочный спектакль с использованием<br>
+							техники «живой» песочной анимации от Театра Живой Анимации;</li>
+							<li style="margin-bottom: 6px; font-size: 14px;"><span style="color: blue;">Активное фойе</span> – огромная площадка различных активностей<br>
+							на любой возраст и вкус!</li>
+							<li style="margin-bottom: 6px; font-size: 14px;"><span style="color: blue;">Настоящий Песочный подарок</span> – конечно, наш подарок не может быть<br>
+							обычным, он просто должен быть ПЕСОЧНЫМ, в духе праздника.</li>
+							</ul>
 						</div>
 					</div>
 					<div style="width: 182px; height: 75px; clear: left; position: relative; bottom: 65px; left: 255px;">
@@ -78,7 +77,7 @@
 					</div>
 				</div>
 			</div>
-			<div style="clear:both">
+			<div style="margin-top: 320px; clear:both">
 				<?php include_once ("blocks/footer-elki.php"); ?>
 			</div>
 		</div>

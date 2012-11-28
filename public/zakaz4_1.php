@@ -1,7 +1,12 @@
+<?php 
+include_once 'inc/conf.php';
+include 'inc/services.php';
+setCID();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 
 			<title>Заказ билетов</title>
 			<link href="zakaz4.css" rel="stylesheet" type="text/css" />
@@ -11,19 +16,19 @@
 			<script type="text/javascript" src="zal/admin/js/jquery-ui-1.8.24.custom/js/jquery-1.8.0.min.js"></script>
 			<script type="text/javascript" src="zal/admin/js/jquery-ui-1.8.24.custom/js/jquery-ui-1.8.24.custom.min.js"></script>
 			<script type="text/javascript" src="js/jquery/widgets/jquery.multiselect.min.js"></script>
+			
 			<!--[if IE 6]>
 			<script src="js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
 			<script type="text/javascript">
 			DD_belatedPNG.fix('.anons');
 			</script>
 			<![endif]-->
-<?php 
-include_once 'inc/conf.php';
-include 'inc/services.php';
-setCID();
+			
+<?php
+
 
 $seansClass = new Seans();
-$seanses = $seansClass->getAll('*', true, 'seans_date', 'alias = ? AND seans_date > ?', array('vol', date('Y-m-d H:i:s')));
+$seanses = $seansClass->getAll('*', true, 'seans_date', 'alias = ? AND seans_date > ?', array('asdfafds', date('Y-m-d H:i:s')));
 
 ?>
 <script type="text/javascript">

@@ -100,14 +100,14 @@ $seanses = $seansClass->getAll('*', true, 'seans_date', 'alias = ? AND seans_dat
 						<!--<br />--> 
 						<p class="sub-title" >Для групп предоставляются скидки!</p>
 						<br />
-						<p >По вопросам приобретения Билетов обращайтесь <br />по телефонам 8 (495) <span class="tel">785-61-95</span> <br/><span style="margin-left: 58px">или +7 (926) 993-98-00.</span></p>
+						<p >По вопросам приобретения Билетов обращайтесь <br />по телефону +7 (8172) <span class="tel">71-11-71</span> <br/></p>
 						<br />
-						<span class="sub-title">Купить билет в театральных кассах:</span>
-						<div >
+						<span class="sub-title">Касса Концертного зала "Русский дом": </span><br> +7 (8172) <span class="tel">72-27-15</span>
+						<!--<div >
 							<p ><a href="http://www.concert.ru/Actions.aspx?bookmark=byDate&Artist=7eAg4eXw5ePzIOzu5ekg8erg5%2bro&CityID=0"><img src="img/concert.png" /></a></p>
 							<p ><a href="http://www.ticketland.ru/show/18790807/2/"><img src="img/ticketland.jpg" /></a></p>
-							<p > <!--<a href="http://www.kassir.ru/msk/db/text/770968480.html "><img src="img/kassir.jpg" width="173px" height="81px;" style="padding-right:3px;"/></a>--><a href="http://www.parter.ru/ru/tickets/na-beregu-moe-skazki-moskva-kc-zn-dk-amo-zil-276539/event.html"><img src="img/parter.jpg" height="81px;" width="173px" /></a></p>
-						</div>
+							<p > <a href="http://www.kassir.ru/msk/db/text/770968480.html "><img src="img/kassir.jpg" width="173px" height="81px;" style="padding-right:3px;"/></a><a href="http://www.parter.ru/ru/tickets/na-beregu-moe-skazki-moskva-kc-zn-dk-amo-zil-276539/event.html"><img src="img/parter.jpg" height="81px;" width="173px" /></a></p>
+						</div>-->
 					</div>
 					<div class="clear"> </div>
 

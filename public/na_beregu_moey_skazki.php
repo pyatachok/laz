@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf8">
@@ -44,7 +44,7 @@
 						</div>
 						<div style="font-size: 12pt; clear: left;">
 							<b class="sub-title">Когда:</b> 16 февраля / 17 февраля  <b class="sub-title">Сеансы:</b> 12:00 / 15:00<br>
-								<b class="sub-title">Где:</b>  Проект Фабрика / Переведеновский переулок, 18
+								<b class="sub-title">Где:</b><span style="font-size: 15px;"> Дом Архитектора / Гранатный пер, д.7 (ст.м. Баррикадная, Арбатская)</span>
 						</div>
 						<div>
 							<p style="font-size: 12pt; margin-top: 10px; padding-right: 10px;">

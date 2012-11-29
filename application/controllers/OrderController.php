@@ -17,28 +17,50 @@ class OrderController extends Zend_Controller_Action
 		
 		$order = new Application_Model_Order();
 		
-		switch ($this->view->mode) {
-			case self::EXCLUDE_DELIVERED_MODE:
-				$orders = $order->getByTypes(array(
-				Application_Model_Order::TYPE_BOOKED,
-				Application_Model_Order::TYPE_CANCEL,
-				Application_Model_Order::TYPE_PAYED,
-				));
-				break;
-			case self::SHOW_DELIVERED_MODE:
-				$orders = $order->getByTypes(array(
-				Application_Model_Order::TYPE_SEND_TO_DELIVERY,
-				));
-				break;
-			case self::ARCHIVE_MODE:
-				$orders = $order->getByTypes(array(
-				Application_Model_Order::TYPE_ARCHIVE,
-				));
-				break;
+		$search_form = new Application_Form_SearchOrder();
+		if ( 'search_order' == $this->_getParam('act', false) ) 
+		{
+			$searchConditions = array(
+				'id' => $this->_getParam('id', false),
+				'fio' => $this->_getParam('fio', false),
+				'tel' => $this->_getParam('tel', false),
+				'email' => $this->_getParam('email', false),
+				'dostavka' => $this->_getParam('dostavka', false),
+				'date_from' => $this->_getParam('date_from', false),
+				'date_to' => $this->_getParam('date_to', false),
+				'seans_id' => $this->_getParam('seans_id', false),
+				'zal_alias' => $this->_getParam('zal_alias', false),
+				
+			);
+			$orders = $order->getBySearchConditions($searchConditions);
+			$search_form->populate($searchConditions);
+		}
+		else 
+		{
+		
+			switch ($this->view->mode) {
+				case self::EXCLUDE_DELIVERED_MODE:
+					$orders = $order->getByTypes(array(
+					Application_Model_Order::TYPE_BOOKED,
+					Application_Model_Order::TYPE_CANCEL,
+					Application_Model_Order::TYPE_PAYED,
+					));
+					break;
+				case self::SHOW_DELIVERED_MODE:
+					$orders = $order->getByTypes(array(
+					Application_Model_Order::TYPE_SEND_TO_DELIVERY,
+					));
+					break;
+				case self::ARCHIVE_MODE:
+					$orders = $order->getByTypes(array(
+					Application_Model_Order::TYPE_ARCHIVE,
+					));
+					break;
 
-			default:
-				$orders = $order->getAll();
-				break;
+				default:
+					$orders = $order->getAll();
+					break;
+			}
 		}
 
 		foreach ($orders as $id => $order) 
@@ -59,7 +81,11 @@ class OrderController extends Zend_Controller_Action
 		$date = new DateTime(date('Y-m-d H:i:s', time()));
 		$this->view->alarm_date = $date->modify("- " . $this->view->book_expiration_days . " day"); //за день до
 		
+		
 		$this->view->page = $this->_getParam('page', 1);
+		
+			$this->view->search_form = $search_form;
+		
 		
     }
 

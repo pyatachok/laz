@@ -14,6 +14,13 @@ $(document).ready(function(){
       { format: "%Y-%m-%d %H:%i:%s",
         hideInput: false
 	} );
+	/*
+	 * Датапикер в форме сеансов
+	 */
+	$("#date_from, #date_to").AnyTime_picker(
+      { format: "%Y-%m-%d",
+        hideInput: false
+	} );
 	
 	
 	

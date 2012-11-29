@@ -155,7 +155,7 @@ class UsersController extends Zend_Controller_Action {
 				$user = new Application_Model_User();
 				$user->getByNameEmail($form->getValue('username'), $form->getValue('email'));
 
-				if (!isset($user->id))
+				if (!isset($user->getRow()->id))
 				{
 					$this->_helper->redirector('index');
 				}
@@ -165,8 +165,9 @@ class UsersController extends Zend_Controller_Action {
 				
 				$user->save();
 				
-				$this->_logUser(Application_Model_LogVariants::GET_NEW_PASSWORD, $user);
 				$user->sendNewPass($password);
+				
+				$this->_logUser(Application_Model_LogVariants::GET_NEW_PASSWORD, $user);
 				
 				$this->_helper->redirector('index');
 			}

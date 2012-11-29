@@ -60,9 +60,9 @@
 				<div style="width: 600px; height: 600px; clear: left; position: relative; top: 25px; background-image: url(img/elki_background.png);">
 				<!--<div align="left" style="margin: 0 90px 0 70px; padding-bottom: 25px;  background-image: url(img/clear_background.png);">-->
 					<div class="nb-collumn-1">
-						<h2 style="color: #780603; float: left; margin-left:140px;">Стоимость:</h2>
-						<font style="font-size: 16px; font-weight: lighter; float: left; margin: 0 20px 20px 0;"><span class="text2">650 руб.</span> – Билет<br>
-						<span class="text2">150 руб.</span> – Подарок<br></font>
+						<h2 style="color: #780603; float: left; margin-left:60px; margin-right: 18px; position: relative; bottom: 14px;">Стоимость: </h2>
+						<font style="position: relative; bottom: 8px; font-size: 16px; font-weight: lighter; float: left; margin: 5 20px 20px 0;"><span class="text2"> 650 руб.</span> – Билет
+						<span class="text2"> 150 руб.</span> – Подарок<br></font>
 						<form action="send4.php" method="post" name="forma" id="forma" target="_blank" >
 							<input type="hidden" name="action" value="booking" />
 							<input type="hidden" name="seats_ids" id="seats_ids" value="" />
@@ -116,7 +116,26 @@
 						</form>
 
 					<div class="clear"> </div>
-					<p style="float: right; margin: 10px 100px 0px 0px; text-align: left;">По вопросам приобретения билетов оптом от 20 шт. обращайтесь по <b>телефону 8-962-949-30-30.</b></p>
+					<div id="cs_container_css">
+					<script charset="UTF-8" src="http://povidget.cultserv.ru/libs/jquery/jquery-1.7.1.min.povidget.js" type="text/javascript"></script>
+					<script charset="UTF-8">
+					cs_insert(
+					{
+					utm_source : 'pesok',
+					event_id : '17330',
+					date : '2012-11-01',
+					time : '',
+					button_code : '<input type="button" value="Купить билеты" />',
+					width : '140',
+					height : '50',
+					venue_id : '',
+					title : '',
+					location : '' // 2 - msk, 3 - spb
+					}
+					);
+					</script>
+					</div>
+					<!--<p style="float: right; margin: 10px 100px 0px 0px; text-align: left;">По вопросам приобретения билетов оптом от 20 шт. обращайтесь по <b>телефону 8-962-949-30-30.</b></p>-->
 					<br />
 					<!--<span class="sub-title">Купить билет в театральных кассах:</span>-->
 <!--					<div >

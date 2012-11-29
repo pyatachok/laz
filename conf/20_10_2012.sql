@@ -98,3 +98,6 @@ ALTER TABLE `users` ADD `code` VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_ge
 INSERT INTO `static_variables` (`id` ,`name` ,`value`)
 VALUES (
 NULL , 'book_expiration_days', '5')
+
+
+ALTER TABLE `orders` ADD `is_delivery` VARCHAR( 255 ) NOT NULL 

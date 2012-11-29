@@ -9,6 +9,7 @@ $kolvo = safe_get($_POST, 'kolvo', '');
 $tel = safe_get($_POST, 'tel', '');
 $email = safe_get($_POST, 'email', '');
 $dostavka = safe_get($_POST, 'dostavka', '');
+$is_delivery = safe_get($_POST, 'is_delivery', '');
 
 if ('' == $email)
 {
@@ -25,6 +26,7 @@ $newOrder->type = Order::TYPE_BOOKED;
 $newOrder->fio = $fio;
 $newOrder->email = $email;
 $newOrder->adress = $tel;
+$newOrder->is_delivery  = $is_delivery ;
 $newOrder->create_date = date('Y-m-d H:i:s', time());
 $newOrder->modify_date = date('Y-m-d H:i:s', time());
 $newOrder->seans_id = safe_get($_POST, 'seans_id', '');

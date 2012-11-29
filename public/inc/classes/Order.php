@@ -19,12 +19,15 @@ class Order extends Operating_Object
 	const SEATE_booked = 4;
 	const SEATE_soled = 5;
 	
+	
+	const ORDER_DELIVERY_COST = 350;
+	
 	protected $db = null;
 	protected $table_name = 'orders';
 	
 	public $columns = array('id', 'type', 'fio', 'email', 
 		'adress', 'create_date', 'modify_date', 'seans_id', 
-		'zal_alias', 'tel','dostavka', 'amount','presents_count','presents_amount');
+		'zal_alias', 'tel','dostavka', 'amount','presents_count','presents_amount','is_delivery');
 	public $columns_to_display = array(
 		'id' => '№ Заказа', 
 		'type'=> 'Тип',
@@ -109,6 +112,7 @@ class Order extends Operating_Object
 			$order->amount += $seans_type_price[$value->ticket_state_id]->price;
 		}
 		
+		/* Учет подарков */
 		if (!empty($order->presents_count))
 		{
 			$seansClass = new Seans();
@@ -121,6 +125,15 @@ class Order extends Operating_Object
 		{
 			$order->presents_amount = 0;
 		}
+		
+		/* Учет доставки */
+		if ( 'delivery' == $order->is_delivery )
+		{
+			$order->amount += self::ORDER_DELIVERY_COST;
+		}else{
+			$order->dostavka = 'Самовывоз';
+		}
+		
 	}
 	
 	function saveOrder($order)

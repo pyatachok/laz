@@ -44,7 +44,7 @@
 #forma p{
 	float: left;
 	width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 7px;
 }
 #forma p input{
 	float: right;
@@ -96,10 +96,15 @@
 							<p>Электронная почта *
 							<input type="text" name="email" style="width: 300px;" maxlength="100" class="form-item" />  
 							</p>
-							<p>Адрес доставки * 
+							<!---->
+							<p style="width: 350px; margin-left: 20px; text-align: left; vertical-align: middle;">
+								<input checked="checked" name="is_delivery" type="radio" value="delivery" style="float:left; margin: 0 10px; "/>Доставка<b>(Стоимость доставки <?php echo Order::ORDER_DELIVERY_COST ; ?>p.)</b><br/>
+								<input name="is_delivery" type="radio" value="theirselvs"  style="float:left; margin: 0 10px;"/>Самовывоз
+							</p>
+							<p><span  name="dostavka">Адрес доставки * </span>
 							<input type="text" name="dostavka" style="width: 300px;" maxlength="100" class="form-item" />  
 							</p>
-							
+							  
 							<div style="float:left;" class="form-item">
 								<input type="button" class="buttons"  name="knopka" id="knopka" value="Бронь"/>
 								<input type="button"  class="buttons" name="knopka" id="buy" value="Покупка"/>

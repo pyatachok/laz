@@ -162,5 +162,17 @@ $(document).ready(function(){
 		$('#forma').find('input[name=action]').val('buy');
 		$('#forma').submit();
 	});
+	
+	/* Управление доставкой */
+	$('input[name="is_delivery"]:radio').change(function(){
+		if ( 'delivery' == $(this).val() ) {
+			$('input[name="dostavka"]').show();
+			$('span[name="dostavka"]').show();
+		} else {
+			$('input[name="dostavka"]').val('').hide();
+			$('span[name="dostavka"]').hide();
+		}
+	});
+	/* Управление доставкой */
 })
 				

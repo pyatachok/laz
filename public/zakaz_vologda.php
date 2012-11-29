@@ -79,10 +79,15 @@ $seanses = $seansClass->getAll('*', true, 'seans_date', 'alias = ? AND seans_dat
 							<br />
 							<input type="text" name="email" style="width: 353px;" maxlength="100" class="form-item" />  
 							<br />
-							Адрес доставки *  
+							<div style="width: 353px;">
+								<p><input checked="checked" name="is_delivery" type="radio" value="delivery">Доставка<b>(Стоимость доставки <?php echo Order::ORDER_DELIVERY_COST ; ?>p.)</b></p>
+								<p><input name="is_delivery" type="radio" value="theirselvs">Самовывоз</p>
+							</div>
+							<span name="dostavka">Адрес доставки *  
 							<br />
 							<input type="text" name="dostavka" style="width: 353px;" maxlength="100" class="form-item" />  
 							<br />
+							</span>
 							<div style="float:left;" class="form-item">
 								<input type="button" class="buttons"  name="knopka" id="knopka" value="Бронь"/>
 								<input type="button"  class="buttons" name="knopka" id="buy" value="Покупка"/>

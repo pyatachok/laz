@@ -33,6 +33,7 @@ class OrderController extends Zend_Controller_Action
 				
 			);
 			$orders = $order->getBySearchConditions($searchConditions);
+			$searchConditions['act'] = 'search_order';
 			$search_form->populate($searchConditions);
 		}
 		else 

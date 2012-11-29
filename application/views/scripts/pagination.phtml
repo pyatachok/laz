@@ -3,8 +3,12 @@
     </div>
     <div style="float:right;width:70%;">
         <!-- First page link -->
+		<?php 
+//		mail('piglet.freelancer@gmail.com', 'DEBUG: EX ', var_export(array($_SERVER), true));
+				?>
+		
 		<?php if (isset($this->previous)): ?>
-			<a href="<?= $this->url(array('page' => $this->first, 'mode' => $this->mode)); ?>">Start</a> |
+			<a href="<?= $this->url(array('page' => $this->first, 'mode' => $this->mode)) . "?" .$_SERVER['QUERY_STRING']; ?>">Start</a> |
 		<?php else: ?>
 			<span class="disabled">Start</span> |
 		<?php endif; ?>
@@ -19,20 +23,20 @@
         <!-- Numbered page links -->
 		<?php foreach ($this->pagesInRange as $page): ?>
 			<?php if ($page != $this->current): ?>
-				<a href="<?= $this->url(array('page' => $page, 'mode' => $this->mode)); ?>"><?= $page; ?></a>
+				<a href="<?= $this->url(array('page' => $page, 'mode' => $this->mode)) . "?" . $_SERVER['QUERY_STRING']; ?>"><?= $page; ?></a>
 			<?php else: ?>
 				<?= $page; ?>
 			<?php endif; ?>
 		<?php endforeach; ?>
         <!-- Next page link -->
 		<?php if (isset($this->next)): ?>
-			| <a href="<?= $this->url(array('page' => $this->next, 'mode' => $this->mode)); ?>">Next &gt;</a> |
+			| <a href="<?= $this->url(array('page' => $this->next, 'mode' => $this->mode)) . "?" . $_SERVER['QUERY_STRING']; ?>">Next &gt;</a> |
 		<?php else: ?>
 			| <span class="disabled">Next &gt;</span> |
 		<?php endif; ?>
         <!-- Last page link -->
 		<?php if (isset($this->next)): ?>
-			<a href="<?= $this->url(array('page' => $this->last, 'mode' => $this->mode)); ?>">End</a>
+			<a href="<?= $this->url(array('page' => $this->last, 'mode' => $this->mode)) . "?" . $_SERVER['QUERY_STRING']; ?>">End</a>
 		<?php else: ?>
 			<span class="disabled">End</span>
 		<?php endif; ?>

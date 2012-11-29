@@ -80,7 +80,6 @@ class HallScheame extends Operating_Object
 				);
 		}
 			krsort($this->_scheame);
-//			mail('piglet.freelancer@gmail.com', 'DEBUG: EX $this->_scheame', var_export(array(array_keys($this->_scheame)) , true));
 	}
 	function getHallScheame()
 	{
@@ -97,7 +96,6 @@ class HallScheame extends Operating_Object
 			array($zalAlias, $id)
 			);
 		$obj = $this->db->fetch_obj();
-//		mail('piglet.freelancer@gmail.com', 'DEBUG: EX $obj', var_export(array($obj), true));
 			return $obj->url;
 	}
 	
@@ -120,6 +118,5 @@ class HallScheame extends Operating_Object
 		$price = $this->db->fetch_obj();
 		$obj->price = $price->price;
 		return $obj;
-//		mail('piglet.freelancer@gmail.com', 'DEBUG: EX $obj', var_export(array($obj), true));
 	}
 }

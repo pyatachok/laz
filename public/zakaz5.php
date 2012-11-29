@@ -23,15 +23,6 @@ setCID();
 
 $seansClass = new Seans();
 $seanses = $seansClass->getAll('*', true, 'seans_date', 'alias = ?', array('boni'));
-//mail('piglet.freelancer@gmail.com', 'test mail', 'test', "From:  admin@liveanimation.ru");
-//mail('mychkova@mail.ru', 'test mail', 'test', "From:  admin@liveanimation.ru");
-
-//smtpmail('piglet.freelancer@gmail.com', 'Заголовок письма', 'Тело письма', $smtp)
-	
-//mail('piglet.freelancer@gmail.com', 'DEBUG: EX ', var_export(array($seanses), true));
-//echo "<pre>";
-//var_dump($seanses);
-//echo "</pre>";
 ?>
 <script type="text/javascript">
 	window.performance_title = "Выберите удобные для вас места на схеме зала и нажмите кнопку Ок.";

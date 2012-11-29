@@ -174,7 +174,6 @@ WHERE seans_id=".self::DEFAULT_SEANS;
 				$this->update(array('ticket_row' =>$rowId), $where);
 			}
 
-		mail('piglet.freelancer@gmail.com', 'c', var_export($all_rows, true) );
 		}
 		
 		

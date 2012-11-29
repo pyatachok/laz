@@ -55,13 +55,13 @@ $seans = $seansClass->getById($newOrder->seans_id);
 
 $newOrder->id = $orderClass->saveOrder($newOrder);
 
-$address = array('svbabin@antipod-group.ru', 'arbat@sandproject.ru', 'mazina@antipod-group.ru',ADMIN_EMAIL, 'piglet.freelancer@vega.com.ua');
+$address = array('svbabin@antipod-group.ru', 'arbat@sandproject.ru', 'mazina@antipod-group.ru',ADMIN_EMAIL);
 $data = $seans->date;
 
 
 
 
-smtpmail(array('piglet.freelancer@gmail.com', 'mazina@antipod-group.ru'), 'DEBUG: send4.php', var_export(array($_REQUEST, $_SERVER, $newOrder), true));
+//smtpmail(array('mazina@antipod-group.ru'), 'DEBUG: send4.php', var_export(array($_REQUEST, $_SERVER, $newOrder), true));
 
 if ('buy' == safe_get($_REQUEST, 'action'))
 {

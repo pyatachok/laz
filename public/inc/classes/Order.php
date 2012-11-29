@@ -119,7 +119,6 @@ class Order extends Operating_Object
 			$seans = $seansClass->getById($order->seans_id);
 			$order->presents_amount = $seans->present_price*$order->presents_count;
 			$order->amount += $order->presents_amount;
-//			smtpmail('piglet.freelancer@gmail.com', 'DEBUG: EX getOrderAmmont', var_export(array($seans, $order), true));
 		}
 		else 
 		{

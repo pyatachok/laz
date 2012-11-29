@@ -16,8 +16,6 @@ switch ($action)
 		$zalClass = new Zal();
 		$zal = $zalClass->getByAlias($seans->zal_alias);
 		$hallScheame = $hallClass->getHallScheameBySeansId($seans->id);
-//		mail('piglet.freelancer@gmail.com', 'DEBUG: EX ', var_export(array($hallScheame), true));
-//		smtpmail('piglet.freelancer@gmail.com', 'DEBUG: EX $hallScheame', var_export(array($zal), true));
 		ob_start();
 		?>
 			<div  style="width: <?php echo (int)$zal->display_width + 280 + 30 + 30; ?>px">
@@ -119,7 +117,6 @@ switch ($action)
 		<?php
 		$out = ob_get_contents();
 		ob_end_clean();
-//		smtpmail('piglet.freelancer@gmail.com', 'DEBUG: EX ajax ', var_export(array($seans, $out), true));
 		echo json_encode(array(	'html' => trim($out),'width' => $zal->display_width, 'height' => $zal->display_height,));
 		break;
 	default :

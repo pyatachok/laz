@@ -37,7 +37,7 @@
 		<tr <?php echo( ($order->create_date < $this->alarm_date->format('Y-m-d H:i:s') && 'booked' == $order->type) ? "style='background-color: #EA6E6E;'" : ''); ?>>
 			<td><?php echo $order->id; ?></td>
 			<td><?php echo $order->type; ?></td>
-			<td><?php echo $order->amount; ?></td>
+			<td><?php echo $order->amount . ('delivery' == $order->is_delivery ? ' <b><br/>+ Доставка</b>' : '') ?></td>
 			<td>
 				<?php if ( in_array($order->type, array('booked', 'payed','send_to_delivery') ) ) : ?>
 					<a c lass ="href-button" href="<?php echo $this->url(array('controller' => 'order', 'action' => 'rebook', 'id' => $order->id, 'mode' => $this->mode, 'page' =>  $this -> page),null,true)?>">
